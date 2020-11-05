@@ -1,0 +1,582 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link href="https://fonts.google.com/specimen/Poppins?query=poppins">
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap3-contact-form/1.4.1/js/contact-form.js"
+        integrity="sha512-2Ocf9zLRoI19oBpJPiYLRM8oWpnCyxvaLPwYuMDVs6MWywaNPmvfuIPI5QPHKdSR2snJSEw9sTN5X8CZsQabzA=="
+        crossorigin="anonymous"></script>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Rampion</title>
+</head>
+
+<body>
+    <!--
+        <div class="loader-container">
+            <div class="loader">
+            <h1 style="color:white">RAMPION</h1>
+            </div>
+        </div>
+    -->
+
+    <main class="container">
+        <!--Navbar-->
+        <div class="navbar" id="navbar">
+            <img class="ramp_logo" src="Images/ramplogo.svg" alt="rampLogo">
+            <div class="clearfix"></div>
+            <div class="menu-wrap">
+                <input type="checkbox" class="toggler">
+                <div class="hamburger">
+                    <div></div>
+                </div>
+                <div class="main">
+                    <ul>
+                        <li><a href="#" style="color: #039c55;">Home</a></li>
+                        <li><a href="#about">About</a></li>
+                        <li><a href="#Service">Services</a></li>
+                        <li><a href="#" id="contact_link">Contact</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <!--Backdrops-->
+        <div id="backdrops" class="backdrops"></div>
+
+        <!--Contact form-->
+        <div class="contact" id="contacts">
+            <div class="contact_details">
+                <h1>Need to contact us?</h1>
+                <p>Why dont you drop your details and we'll try to get back at you as quick as possible.</p>
+            </div>
+            <form class="actual_form" method="POST" id="form_sub" action="send">
+                <h1 class="header">Contact us</h1>
+                <input id="name" type="text" name="name" placeholder="name" />
+                <input id="email" type="text" name="mail" placeholder="email">
+                <textarea id="message" name="message" placeholder="message"></textarea>
+                <button type="submit">Submit</button>
+            </form>
+        </div>
+        <!--Carousel-->
+        <div class="carousel">
+            <div class="inner_carousel">
+                <div class="welcome" data-aos="fade-right">
+                    <h5>Welcome to rampion!</h5>
+                    <h1>What we do</h1>
+                    <p class="para1">We create high quality visual designs,
+                        web designs, and branding that leave a worthy
+                        feeling, even on your pockets.</p>
+                    <p class="para2">Over the years, we have helped and guided many businesses across Nigeria to achieve
+                        Outstanding
+                        results.</p>
+                </div>
+                <img onmouseover="rotatePhone()" onmouseout="stopRotate()" id="welcomeImg" data-aos="fade-left"
+                    src="Images/IPHONE X.svg" alt="welcome_image">
+            </div>
+        </div>
+
+        <!--scroll to top button-->
+        <button id="myBtn" class="myBtn"><i class="fa fa-arrow-up" aria-hidden="true"></i></button>
+
+
+        <!--About us-->
+        <div class="aboutus" id="about">
+            <img data-aos="fade-right" src="Images/TEAM-PICTURE.svg" alt="teamPicture">
+            <div data-aos="fade-left" class="about_details">
+                <h5 class="h5_one">What you should Know about us</h5>
+                <h1>About us</h1>
+                <p class="para1">Rampion came up as a vision in 2017 with the view of importing into young minds the
+                    skill to project their imagination and ideas through tech </p>
+                <p class="para2"> Now, we stand in the forefont making our mark as one of the leading tech agency in
+                    Nigeria, That design brands, build website and custom application for businesses around the world</p>
+                <h5 class="expect_D">Expect More from us in few years</h5>
+            </div>
+        </div>
+        <!--Our Services-->
+        <div class="Scontainer" id="Service">
+            <!--Heading-->
+            <div class="Heading">
+
+                <h1>Our Services</h1>
+                <p>Here's how we can help you Exceed Your Goals.</p>
+            </div>
+
+            <!--Cards-->
+            <div class="row">
+                <div data-aos="fade-up" class="col">
+                    <div class="card">
+                        <img src="Images/Service_utilities/development.svg" alt="development" />
+                        <h3>Development</h3>
+                        <p>We develop functional website and mobile applications for both Android and IOS.</p>
+                        <p class="p2">We use cutting edge Technologies: HTML5, CSS3, JavaScript, REACT JS, Node JS,
+                            Express JS, Python and wordpress to give your website and application a smooth running.</p>
+                    </div>
+                </div>
+                <div data-aos="fade-up" class="col">
+                    <div class="card">
+                        <img src="Images/Service_utilities/ui and ux icon.svg" alt="ui_ux design" />
+                        <h3>Ui and ux Designs</h3>
+                        <p>Responsive User interface designs that adheres to today's technical standards, ensuring
+                            smartphone, tablet and laptop users alike can interact with our work.
+                        <p class="p2">We've got all that covered for you using the right tools such as Figma, Adobe XD,
+                            Protopie, Invision studio</p>
+                        </p>
+                    </div>
+                </div>
+                <div data-aos="fade-up" class="col">
+                    <div class="card">
+                        <img src="Images/Service_utilities/branding.svg" alt="Branding" />
+                        <h3>Branding designs</h3>
+                        <p>A brand today is about how it makes your customers feel. You are assured of getting unique
+                            logos and lots more that potray your brand and amaze your audience.</p>
+                        <p class="p2">We reflect your unique brand identity while achieving the maximum aesthetic
+                            impact</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!--Extra service-->
+        <div class="extraService">
+            <div class="inner_EService">
+                <div>
+                    <img src="Images/Service_utilities/graphics.svg" alt="graphic pic">
+                    <p>We create quality and affordable illustrations, flyers, motion graphics and lots more that makes
+                        your brand stand out.</p>
+                </div>
+                <div>
+                    <img src="Images/Service_utilities//wireframing.svg" alt="wireframe">
+                    <p>The sketching of wireframes is integral in beginning to realise concepts and ideas into readable,
+                        managed design.</p>
+                </div>
+            </div>
+
+            <img class="web_icon" src="Images/Service_utilities/web icon.svg" alt="web_icon">
+        </div>
+
+        <!--Projects-->
+        <div class="projects">
+            <h2 class="proj_head">Our Projects</h2>
+            <div class="proj_container">
+                <div class="row">
+                    <img src="Images/Projects/1.svg" alt="card_bedrock"><span>CARDS-BEDROCK</span>
+                    <img src="Images/Projects/2.svg" alt="dewa shirt"><span>Dewa Shirt</span>
+                    <img src="Images/Projects/3.svg" alt="pto_game"><span>Game center</span>
+                </div>
+                <div class="row">
+                    <img src="Images/Projects/4.svg" alt="zobo_ui"><span>zobo-ui</span>
+                    <img src="Images/Projects/5.svg" alt="zobo_rebranded"><span>Zobo Rebranded</span>
+                    <img src="Images/Projects/6.svg" alt="ramp_music"><span>Ramp music studio</span>
+                </div>
+                <div class="row">
+                    <img src="Images/Projects/7.svg" alt="codeEx"><span>Sample proj</span>
+                    <img src="Images/Projects/8.svg" alt="pc-audio"><span>Sample proj</span>
+                    <img src="Images/Projects/9.svg" alt="dewa-shirt"><span>wireframing</span>
+                </div>
+            </div>
+        </div>
+
+        <!--Client_feedback-->
+        <div id="client_proj" class="container-client">
+            <div class="client_container">
+                <div class="description">
+                    <h1 class="client_head">What our clients <span>are saying</span></h1>
+                    <div class="greenDot"></div>
+                </div>
+                <div class="body_container">
+                    <div class="body_flex">
+                        <div class="flex1">
+                            <div class="cli">
+                                <p>Clients</p>
+                                <h1 id="client_no">0</h1>
+                            </div>
+                            <div class="pj">
+                                <p>projects</p>
+                                <h1 id="proj_no">0</h1>
+                            </div>
+                        </div>
+                        <div class="flex2">
+                            <p class="para1">Looking at the project again and again, I feel it's worth forever. Thank
+                                you for the Creativity, I owe you bigger jobs, it shows your diligence.<br><span
+                                    class="commenter">-Manuel Moore</span></p>
+                            <p class="para2">Their team of engineers are young, passionate, energetic and productive.
+                                The client's products are treated as a rampion entity, which is why whatever is been
+                                delivered by rampion has a unique touch<br><span class="commenter">-Leom of
+                                    Things</span></p>
+                            <p class="para3">As technology evolve, rampion will surely be available to help bring your
+                                ideas to live and solve your digital problems<br><span class="commenter">-Marolino Sound
+                                    classic</span></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--FAQ-->
+        <div class="FAQ">
+            <div data-aos="fade-right" class="faq_details">
+                <h4>Faq</h3>
+                    <h3>What is the design process <i class="fa fa-chevron-down down" id="toggleFAQ"></i> </h3>
+                    <p id="faq_para" class="para">We spend time communicating with you to get a touch of your business
+                        and the best way to communicate your require spec and material. You choose the look you are good
+                        with and we take it from there.</p>
+                    <h3 class="sec_heading">How long will the job take? <i class="fa fa-chevron-down down"
+                            id="toggleFAQ2"></i></h3>
+                    <p id="faq_para2" class="para">Every job and individual deadline is different, if your deadline is
+                        tight, we will
+                        try our best to complete work within the specified time. We will suffice time for
+                        proof reading your work and other correction show the design have errors. We will, of course,
+                        advise at the time
+                        of the work. We haven't missed a deadline yet and don't
+                        intend to in the future.</p>
+            </div>
+            <img data-aos="fade-left" id="goodbyeImg" onmouseover="rotatePhone()" onmouseout="stopRotate()"
+                src="Images/Thank You.svg" alt="thank_you_phone">
+        </div>
+
+        <!--Footer-->
+        <div id="footer">
+            <img class="ramplogo-footer" src="Images/ramplogo.svg" alt="logo"><br>
+            <div class="ramp-column1">
+                <h5 class="rule">RULE</h5>
+            </div>
+            <div class="ramp-column">
+                <h5 class="aspire">ASPIRE</h5>
+            </div>
+            <div class="ramp-column">
+                <h5 class="magnificent">MAGNIFICENT</h5>
+            </div>
+            <div class="ramp-column">
+                <h5 class="professional">PROFESSIONAL</h5>
+            </div>
+            <div class="ramp-column">
+                <h5></h5>
+            </div>
+            <div class="ramp-column">
+                <a href="https://www.instagram.com/rampiondml/"><img class="phone-icons"
+                        src="Images/ICONS/instagram.svg"></a>
+            </div>
+            <br>
+            <div class="ramp-column1">
+                <h5 class="rule"></h5>
+            </div>
+            <div class="ramp-column">
+                <h5 class="aspire"></h5>
+            </div>
+            <div class="ramp-column">
+                <h5 class="magnificent"></h5>
+            </div>
+            <div class="ramp-column">
+                <h5 class="professional">+2349013145271</h5>
+            </div>
+            <div class="ramp-column">
+                <h5></h5>
+            </div>
+            <div class="ramp-column">
+                <a href="https://m.facebook.com/benjaminosewminge?ref=bookmarks"><img class="phone-icons"
+                        src="Images//ICONS/facebool.svg"></a>
+            </div>
+            <br>
+            <div class="ramp-column1">
+                <h5 class="rule"></h5>
+            </div>
+            <div class="ramp-column">
+                <h5 class="aspire"></h5>
+            </div>
+            <div class="ramp-column">
+                <h5 class="magnificent"></h5>
+            </div>
+            <div class="ramp-column">
+                <h5 class="professional">+23439937290</h5>
+            </div>
+            <div class="ramp-column">
+                <h5></h5>
+            </div>
+            <div class="ramp-column">
+                <a href="https://twitter.com/rampiondml"><img class="phone-icons" src="Images/ICONS/twitter.svg"></a>
+            </div>
+            <br>
+            <div class="ramp-column1">
+                <h5 class="rule">Lagos,Nigeria</h5>
+            </div>
+            <div class="ramp-column">
+                <h5 class="aspire"></h5>
+            </div>
+            <div class="ramp-column">
+                <h5></h5>
+            </div>
+            <div class="ramp-column">
+                <h5 class="professional" id="email">rampiondml@gmail.com</h5>
+            </div>
+            <div class="ramp-column">
+                <h5 class="behance">Behance</h5>
+            </div>
+            <div class="ramp-column">
+                <h5 class="right-items">Dribble</h5>
+            </div><br>
+            <font id="copyright">copyright &copy;. All Right Reserved </font>
+            <br><br>
+        </div>
+        <div id="phone-footer">
+            <img class="phone-ramplogo-footer" src="Images/ramplogo.svg" alt="logo"><br>
+            <div class="ramp-phone-column">
+                <h4>RULE</h4>
+                <h4 class="green">ASPIRE</h4>
+                <h4>MAGNIFICENT</h4>
+                <h4 class="green">PROFESSIONAL</h4>
+                <a href="https://www.instagram.com/rampiondml/"><img class="phone-icons"
+                        src="Images/ICONS/instagram.svg"></a><BR>
+                <a href="https://m.facebook.com/benjaminosewminge?ref=bookmarks"><img class="phone-icons"
+                        src="Images//ICONS/facebool.svg"></a><BR>
+                <a href="https://twitter.com/rampiondml"><img class="phone-icons"
+                        src="Images/ICONS/twitter.svg"></a><BR>
+            </div>
+            <div class="ramp-phone-column2">
+                <h4 class="green">+2349013145271</h4>
+                <h4 class="green">+23439937290</h4>
+                <br>
+                <br>
+                <br><br><br><br>
+                <a class="phone-link" href="https://www.behance.net/rampiondml">
+                    <h4>Behance</h4>
+                </a>
+                <a class="phone-link" href="https://dribbble.com/rampiondml">
+                    <h4>Dribbble</h4>
+                </a>
+                <h4>Lagos Nigeria</h4>
+            </div>
+        </div>
+    </main>
+
+
+</body>
+<script>
+    /*$(window).on("load", function () {
+  $(".loader-container").fadeOut(3000);
+});
+$("document").ready(function () {
+    $("#down").click(function () {
+      $("#p-1").toggle();
+    });
+    $("#down2").click(function () {
+      $("#p-2").toggle();
+    });
+  });*/
+
+    //Animation on scroll
+    AOS.init({
+        duration: 1200,
+    });
+
+    //Project images
+
+    const span_details = document.querySelectorAll(".row a");
+    console.log(span_details);
+
+    span_details.forEach((item) => {
+        let spanText = item.querySelector("span");
+        item.addEventListener("mouseover", () => {
+            spanText.style.display = "block";
+        });
+
+        item.addEventListener("mouseout", () => {
+            spanText.style.display = "none";
+        });
+    });
+
+    /*Number countdown*/
+    var client_proj = document.getElementById("client_proj");
+    var targetHeight = client_proj.clientHeight;
+    console.log(targetHeight);
+
+
+    var counter = 10,
+        intervalID1,
+        intervalID2;
+
+    window.addEventListener('scroll', TimerCountDown)
+
+    function TimerCountDown() {
+        if (document.body.scrollTop > 4000 || document.documentElement.scrollTop > 3000) {
+            calcClient();
+            calcProject();
+            console.log("event listener gotten")
+            window.removeEventListener('scroll', TimerCountDown);
+        }
+    }
+
+
+    function calcClient() {
+        var client_no = 100;
+        intervalID1 = setInterval(() => {
+            var client_value = document.getElementById("client_no").innerHTML;
+            var res = Number(client_value) + counter;
+            document.getElementById("client_no").innerHTML = res;
+            Number(document.getElementById("client_no").innerHTML) == client_no ? clearInterval(intervalID1) : null;
+        }, 100);
+    }
+
+    function calcProject() {
+        var proj_no = 420;
+        intervalID2 = setInterval(() => {
+            var proj_value = document.getElementById("proj_no").innerHTML;
+            var res = Number(proj_value) + counter;
+            document.getElementById("proj_no").innerHTML = res;
+            Number(document.getElementById("proj_no").innerHTML) == proj_no ? clearInterval(intervalID2) : null;
+        }, 100);
+    }
+
+
+    var identity = false;
+
+    //contact.addEventListener('click',(error)=>{  
+    /* identity = !identity;
+   
+   switch(identity){
+     case true:
+       body.style.background ="#191919";
+       backdrops.style.display="block";
+       break;
+   
+     case false:
+       backdrops.style.display="none"
+       break;
+   
+     default:
+       console.log(error);
+   }*/
+    //})
+
+
+    //FAQ
+    var faq_icon = document.getElementById("toggleFAQ");
+    var faq_para = document.getElementById("faq_para");
+    var faq_icon2 = document.getElementById("toggleFAQ2");
+    var faq_para2 = document.getElementById("faq_para2");
+    var boolToggle1 = false;
+    var boolToggle2 = false;
+
+    faq_icon.addEventListener('click', () => {
+        boolToggle1 = !boolToggle1
+        boolToggle1 == true ? showFaq(faq_icon, faq_para) : hideFaq(faq_icon, faq_para);
+    });
+
+    faq_icon2.addEventListener('click', () => {
+        boolToggle2 = !boolToggle2;
+        boolToggle2 == true ? showFaq(faq_icon2, faq_para2) : hideFaq(faq_icon2, faq_para2);
+    })
+
+    function showFaq(para1, para2) {
+        para2.style.display = "block";
+        para1.setAttribute("class", "fa fa-chevron-up up");
+    }
+
+    function hideFaq(para1, para2) {
+        para2.style.display = "none";
+        para1.setAttribute("class", "fa fa-chevron-down down");
+    }
+
+
+    var contact_handle = document.getElementById("contact_link");
+    var contactForm = document.getElementById("contacts");
+    var backdrops = document.getElementById("backdrops");
+
+    contact_handle.onclick = () => {
+        backdrops.style.display = "block";
+        contactForm.style.display = "flex";
+    }
+
+    backdrops.onclick = () => {
+        contactForm.style.display = "none";
+        backdrops.style.display = "none";
+    }
+
+    /*Scroll to top button */
+    var buttonTop = document.getElementById("myBtn");
+
+    window.onscroll = function () {
+        scrollFunction();
+    }
+
+    function scrollFunction() {
+        document.body.scrollTop > 3500 || document.documentElement.scrollTop > 3000 ? console.log("ddd") : null
+        document.body.scrollTop > 20 || document.documentElement.scrollTop > 20 ? buttonTop.style.display = "block" : buttonTop.style.display = "none";
+    }
+
+    buttonTop.addEventListener('click', () => {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
+
+
+    //Window onload rotate animation
+    var sec = 0;
+    var phoneImg = document.getElementById("welcomeImg");
+    var phoneImg2 = document.getElementById("goodbyeImg");
+    var intervalID;
+
+    function rotatePhone() {
+        intervalID = setInterval(rotate, 10);
+    }
+
+    function rotate() {
+        console.log(sec)
+        phoneImg.style.transform = `rotateY(${sec++}deg)`;
+        phoneImg2.style.transform = `rotateY(${sec++}deg)`;
+
+        //sec == 2360? clearInterval(intervalID):null
+    }
+
+    function stopRotate() {
+        clearInterval(intervalID);
+    }
+
+
+
+    //Handling Form submission
+
+    var form_sub = document.getElementById("form_sub");
+    var email = document.getElementById("email");
+    var Name = document.getElementById("name");
+    var message = document.getElementById("message");
+    const mainURL = "https://rampiontech.herokuapp.com/contact/send"
+
+    
+    form_sub.addEventListener('submit', async (e) => {
+        e.preventDefault();
+        var EmailVal = email.value;
+        var NameVal = Name.value;
+        var MesageValue = message.value;
+
+        console.log(EmailVal, NameVal, MesageValue);
+
+        await axios({
+            method: "POST",
+            url: mainURL,
+            data: {
+                name: NameVal,
+                email: EmailVal,
+                message: MesageValue,
+            },
+            headers: {
+                'Content-Type': 'application/json'
+            },
+        }).then(response => {
+            if (response.data.msg == "success") {
+                alert("Message sent");    
+            } else if (response.data.msg === "fail") {
+                alert("message failed to send");
+                console.log(response.data.errormessage);
+            }
+        });
+    });
+    
+</script>
+
+</html>

@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="181" height="50" viewBox="0 0 181 50">
+  <g id="Group_98" data-name="Group 98" transform="translate(-243 -116)">
+    <path id="ON_BUTTON" data-name="ON BUTTON" d="M395.4,370.4a13.385,13.385,0,0,1-13.5-13.288,13.232,13.232,0,0,1,7.288-11.792c2.219-1.039,3.1,2.443,1.271,3.316a9.689,9.689,0,1,0,14.684,8.327c0-3.889-1.886-6.166-5.252-8.186-1.961-.931-1.645-5.51,2.742-2.767,4.288,2.219,6.283,5.983,6.283,11.094A13.4,13.4,0,0,1,395.4,370.4Zm.324-16.263h-1.263c-.59-.017-1.263-1.28-1.263-1.87.017.507,0-10,0-10,0-.756.673-1.87,1.263-1.87h1.263c.582,0,1.255,1.122,1.255,1.87v10c-.008.748-.681,1.87-1.255,1.87Z" transform="translate(-14.9 -216.4)" fill="#06f38c" fill-rule="evenodd"/>
+    <text id="RAMPI_N" data-name="RAMPI    N" transform="translate(243 152)" fill="#f5f5f5" font-size="36" font-family="Mont-HeavyDEMO, Mont DEMO" font-weight="800"><tspan x="0" y="0">RAMPI</tspan><tspan y="0" xml:space="preserve" fill="#059b9b">    </tspan><tspan y="0">N</tspan></text>
+  </g>
+</svg>
